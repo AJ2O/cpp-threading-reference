@@ -42,7 +42,7 @@ void Lambda()
 }
 
 // 3. Non-static member function
-class NonStaticClass
+class NonStaticFunctionClass
 {
 public:
     void run(int x)
@@ -55,9 +55,29 @@ public:
 };
 void NonStaticMemberFunction()
 {
-    NonStaticClass nsc;
+    NonStaticFunctionClass nsc;
     // function and object reference are passed directly with arguments
-    std::thread t(&NonStaticClass::run, &nsc, 10);
+    std::thread t(&NonStaticFunctionClass::run, &nsc, 10);
+    t.join();
+}
+
+// 4. Non-static member function
+class StaticFunctionClass
+{
+public:
+    static void run(int x)
+    {
+        while (x-- > 10)
+        {
+            cout << x << endl;
+        }
+    }
+};
+void StaticMemberFunction()
+{
+    StaticFunctionClass sc;
+    // only the static function address is required
+    std::thread t(&StaticFunctionClass::run, 10);
     t.join();
 }
 
@@ -71,5 +91,8 @@ int main()
 
     // 3. Non-Static Member Function
     NonStaticMemberFunction();
+
+    // 4. Static Member Function
+    StaticMemberFunction();
     return 0;
 }
