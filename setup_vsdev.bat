@@ -4,3 +4,4 @@ cl /EHs /MT threading-methods.cpp
 cl /EHs /MT mutex.cpp
 cl /EHs /MT timed-mutex.cpp
 cl /EHs /MT recursive-mutex.cpp
+cl /EHs /MT lock-guard.cpp
