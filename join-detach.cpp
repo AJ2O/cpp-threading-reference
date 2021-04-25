@@ -16,14 +16,14 @@ using namespace std;
 void run(int count)
 {
     cout << "Running..." << endl;
-    std::this_thread::sleep_for(chrono::seconds(count));
+    this_thread::sleep_for(chrono::seconds(count));
 }
 
 int main()
 {
     // Join
     int x = 10;
-    std::thread t(run, x);
+    thread t(run, x);
     cout << "join -- main()" << endl;
     t.join();
 
@@ -38,7 +38,7 @@ int main()
     cout << "join -- main() after " << x << " seconds" << endl;
 
     // Detach
-    std::thread td(run, x);
+    thread td(run, x);
     cout << "detach -- main()" << endl;
     td.detach();
     cout << "detach -- main() before " << x << " seconds has passed" << endl;

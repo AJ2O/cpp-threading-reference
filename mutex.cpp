@@ -46,8 +46,8 @@ int main()
 {
     // Regular lock
     // both threads start in parallel
-    std::thread t1(AddToX);
-    std::thread t2(AddToX);
+    thread t1(AddToX);
+    thread t2(AddToX);
     t1.join();
     t2.join();
     cout << "100000 + 100000 --- lock() has the result: " << x << endl;
@@ -56,8 +56,8 @@ int main()
     // Running this program multiple times will yield different answers
     // Under normal lock(), the result will always be 200,000
     endResult = 0;
-    std::thread t3(AddToXTryLock);
-    std::thread t4(AddToXTryLock);
+    thread t3(AddToXTryLock);
+    thread t4(AddToXTryLock);
     t3.join();
     t4.join();
     cout << "100000 + 100000 --- try_lock() has the result: " << endResult << endl;

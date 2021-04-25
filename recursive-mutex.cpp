@@ -1,6 +1,6 @@
 /*
     Recursive Mutex
-        - recursive_mutex allows the same thread to lock one mutex 
+        - std::recursive_mutex allows the same thread to lock one mutex 
           multiple times (ex. in a recursive call)
 
         - logic must be written to unlock the mutex the same amount

@@ -1,6 +1,6 @@
 /*
     Timed Mutex
-        - timed_mutex blocks other threads until the specified timeout
+        - std::timed_mutex blocks other threads until the specified timeout
         
         - try_lock_for() attempts to lock for a specified length of time
         - try_lock_until() attempts to lock until a specified time
@@ -58,14 +58,14 @@ void AddToYUntil(int i)
 
 int main()
 {
-    std::thread t1(AddToX, 1);
-    std::thread t2(AddToX, 2);
+    thread t1(AddToX, 1);
+    thread t2(AddToX, 2);
     t1.join();
     t2.join();
     cout << x << endl;
 
-    std::thread t3(AddToYUntil, 3);
-    std::thread t4(AddToYUntil, 4);
+    thread t3(AddToYUntil, 3);
+    thread t4(AddToYUntil, 4);
     t3.join();
     t4.join();
     cout << y << endl;
