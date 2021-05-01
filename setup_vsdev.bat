@@ -9,3 +9,4 @@ cl /EHs /MT unique-lock.cpp
 cl /EHs /MT condition-variables.cpp
 cl /EHs /MT lock.cpp
 cl /EHs /MT future-promise.cpp
+cl /EHs /MT async.cpp

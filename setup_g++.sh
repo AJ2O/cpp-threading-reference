@@ -9,3 +9,4 @@ g++ -g unique-lock.cpp -o unique-lock.exe
 g++ -g condition-variables.cpp -o condition-variables.exe
 g++ -g lock.cpp -o lock.exe
 g++ -g future-promise.cpp -o future-promise.exe
+g++ -g async.cpp -o async.exe
