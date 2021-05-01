@@ -8,3 +8,4 @@ cl /EHs /MT lock-guard.cpp
 cl /EHs /MT unique-lock.cpp
 cl /EHs /MT condition-variables.cpp
 cl /EHs /MT lock.cpp
+cl /EHs /MT future-promise.cpp
