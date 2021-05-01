@@ -7,3 +7,4 @@ g++ -g recursive-mutex.cpp -o recursive-mutex.exe
 g++ -g lock-guard.cpp -o lock-guard.exe
 g++ -g unique-lock.cpp -o unique-lock.exe
 g++ -g condition-variables.cpp -o condition-variables.exe
+g++ -g lock.cpp -o lock.exe
